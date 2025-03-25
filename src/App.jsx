@@ -1,29 +1,27 @@
 import React from 'react'
-
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import HeroCard from './components/HeroCard'
+import JobListing from './components/JobListing'
 const App = () => {
-
-  const name1 = ['aaa', 'bbb', 'ccc', 'ddd', 'eee'];
-
-  const logged = true;
-
-  const styles = {
-    color : 'pink',
-    fontSize : '55px'
-  }
 
   return (
 
     <>
-      {logged ? <h3 className="text-3xl font-bold underline">You are logged in</h3> : <h3>You are not logged in</h3>}
-      <div>
-        <p style={styles}>Hello</p>
-        <ul>
-          {name1.map((name1, index) => (
-            <li key={index}>{name1} </li>
-          ))
-          }
-        </ul>
-      </div>
+
+      <Navbar />
+      <Hero />
+      <HeroCard />
+      <JobListing />
+
+
+      <section className="m-auto max-w-lg my-10 px-6">
+        <a
+          href="jobs.html"
+          className="block bg-black text-white text-center py-4 px-6 rounded-xl hover:bg-gray-700"
+        >View All Jobs</a
+        >
+      </section>
     </>
 
   )
