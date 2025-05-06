@@ -7,7 +7,7 @@ const Home = () => {
         <>
             <Hero />
             <HeroCard />
-            <JobListing />
+            <JobListing isHome={true} />
             <ViewAll />
         </>
     )
